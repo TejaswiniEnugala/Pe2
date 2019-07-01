@@ -34,27 +34,27 @@ public class StudentGradesTest {
     }
     @Test
     public void checkForStudentGrades(){
-        int students=6;
-        int[] marks = {30,40,58,76,32,74};
+        int students=4;
+        int[] marks = {20,40,60,80};
         actualResult=studentMarksCaluculator.getAverage(students,marks);
-        expectedResult="average of students marks is 51.0";
+        expectedResult="average of students marks is 50.0";
         assertEquals(expectedResult,actualResult);
 
         actualResult=studentMarksCaluculator.getMaxMarks(students,marks);
-        expectedResult="The maximum grade is 76";
+        expectedResult="The maximum grade is 80";
         assertEquals(expectedResult,actualResult);
 
 
         actualResult=studentMarksCaluculator.getMinMarks(students,marks);
-        expectedResult="The minimum grade is 30";
+        expectedResult="The minimum grade is 20";
         assertEquals(expectedResult,actualResult);
     }
     @Test
     public void checkForGradesOfStudents(){
-        int students=10;
-        int[] marks = {76,90,52,12,76,34,72,20,83,49};
+        int students=3;
+        int[] marks = {30,90,60};
         actualResult=studentMarksCaluculator.getAverage(students,marks);
-        expectedResult="average of students marks is 56.0";
+        expectedResult="average of students marks is 60.0";
         assertEquals(expectedResult,actualResult);
 
         actualResult=studentMarksCaluculator.getMaxMarks(students,marks);
@@ -63,7 +63,7 @@ public class StudentGradesTest {
 
 
         actualResult=studentMarksCaluculator.getMinMarks(students,marks);
-        expectedResult="The minimum grade is 12";
+        expectedResult="The minimum grade is 30";
         assertEquals(expectedResult,actualResult);
     }
 
