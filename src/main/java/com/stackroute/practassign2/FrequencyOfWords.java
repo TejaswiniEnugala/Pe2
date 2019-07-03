@@ -8,7 +8,6 @@ public class FrequencyOfWords {
         String line = " ";
         String rev = "";
         String str = " ";
-        int len;
         try {
             FileReader fr = new FileReader(file);
             BufferedReader bufferReader = new BufferedReader(fr);

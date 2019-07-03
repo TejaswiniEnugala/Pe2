@@ -12,16 +12,24 @@ import static org.junit.Assert.*;
 
 public class ReadTextFileTest {
     ReadTextFile file;
-    PrintWriter actualResult;
-    String expectedResult;
     @Before
     public void setup(){
         file=new ReadTextFile();
     }
     @Test
     public void readFileAndConveretToUpperCase() throws IOException {
-      String str=file.readFile(new File("f.txt"));
-        assertEquals(" HELLOWELCOME",str);
+      String result=file.readFile(new File("f.txt"));
+        assertEquals(" HELLOWELCOME",result);
+    }
+    @Test
+    public void readGivenFileAndDisplayOutputInUppercase() throws IOException {
+        String result=file.readFile(new File("file2.txt"));
+        assertEquals(" HII THIS IS TEJU",result);
+    }
+    @Test
+    public void readGivenFileAndDisplayContentsInUppercase() throws IOException {
+        String result=file.readFile(new File("file1.txt"));
+        assertEquals(" I AM  MANI AM GOOD",result);
     }
     @After
     public void tearDown(){
